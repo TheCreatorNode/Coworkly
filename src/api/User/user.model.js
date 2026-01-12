@@ -34,6 +34,10 @@ const userSchema = new mongoose.Schema({
       message: "Passwords are not the same",
     },
   },
+  organization: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Organization",
+  },
 });
 
 const User = mongoose.model("User", userSchema);
